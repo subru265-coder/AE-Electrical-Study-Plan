@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assistant Engineer Electrical Study Plan | Electrical EduZone</title>
+<style>
+:root{
+  --bg:#eafafb; --surface:#ffffff; --ink:#14202e; --muted:#5a6878; --line:#c9d3de;
+  --accent:#ff69b4; --accent-ink:#1a1020; --brand2:#5ce1e6; --focus:#0b7f88; --err:#b3261e; --ok:#17603a; --ok-bg:#e4f4ea;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1620; --surface:#18222f; --ink:#e8eef5; --muted:#9aa8b8; --line:#2c3a4b;
+    --accent:#ff7fc0; --accent-ink:#1a1020; --brand2:#5ce1e6; --focus:#5ce1e6; --err:#ff8a80; --ok:#7fdca4; --ok-bg:#16301f;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1620; --surface:#18222f; --ink:#e8eef5; --muted:#9aa8b8; --line:#2c3a4b;
+  --accent:#ff7fc0; --accent-ink:#1a1020; --brand2:#5ce1e6; --focus:#5ce1e6; --err:#ff8a80; --ok:#7fdca4; --ok-bg:#16301f;
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;line-height:1.5;min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:32px 16px}
+main{width:100%;max-width:460px;background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--brand2);border-radius:14px;padding:24px 24px 20px}
+.brand{display:flex;flex-direction:column;align-items:center;margin-bottom:16px}
+.logo{width:150px;max-width:60%;height:auto;border-radius:10px;background:#fff;display:block}
+.foot{margin:22px 0 0;padding-top:14px;border-top:1px solid var(--line);text-align:center;font-size:.85rem;color:var(--muted)}
+.foot strong{color:var(--ink)}
+h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+p.lead{margin:0 0 22px;color:var(--muted)}
+label,legend{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;padding:0}
+.field{margin-bottom:18px}
+input[type=text],input[type=email]{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:11px 12px}
+input:focus-visible,button:focus-visible,a:focus-visible,.opt:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:2px}
+fieldset{border:0;margin:0 0 18px;padding:0}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{flex:1 1 90px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--bg);cursor:pointer;font-weight:500;margin:0}
+.opt input{accent-color:var(--accent);margin:0}
+.opt:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.err{color:var(--err);font-size:.85rem;margin-top:5px;min-height:0}
+.invalid{border-color:var(--err)!important}
+button,a.btn{display:inline-block;width:100%;text-align:center;font:inherit;font-weight:600;background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:13px 16px;cursor:pointer;text-decoration:none}
+#done{display:none}
+.ok{background:var(--ok-bg);color:var(--ok);border-radius:8px;padding:12px 14px;margin-bottom:18px;font-weight:600}
+.alt{display:block;text-align:center;margin-top:14px;font-size:.9rem;color:var(--muted)}
+.alt a{color:var(--focus);font-weight:600}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><img class="logo" alt="Electrical EduZone logo" src="data:image/jpeg;base64,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"></div>
+  <section id="formView">
+    <h1>Assistant Engineer Electrical Study Plan</h1>
+    <p class="lead">Fill in your details to unlock your free study plan from Electrical EduZone.</p>
+    <div id="formEl" novalidate>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" autocomplete="name">
+        <div class="err" id="e-name"></div>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" autocomplete="email" inputmode="email">
+        <div class="err" id="e-email"></div>
+      </div>
+      <div class="field">
+        <label for="district">District</label>
+        <input type="text" id="district" list="districts" autocomplete="off">
+        <datalist id="districts">
+          <option>Thiruvananthapuram</option><option>Kollam</option><option>Pathanamthitta</option>
+          <option>Alappuzha</option><option>Kottayam</option><option>Idukki</option><option>Ernakulam</option>
+          <option>Thrissur</option><option>Palakkad</option><option>Malappuram</option><option>Kozhikode</option>
+          <option>Wayanad</option><option>Kannur</option><option>Kasaragod</option>
+        </datalist>
+        <div class="err" id="e-district"></div>
+      </div>
+      <fieldset>
+        <legend>Qualification</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="qual" value="B.Tech"> B.Tech</label>
+          <label class="opt"><input type="radio" name="qual" value="M.Tech"> M.Tech</label>
+          <label class="opt"><input type="radio" name="qual" value="Ph.D"> Ph.D</label>
+        </div>
+        <div class="err" id="e-qual"></div>
+      </fieldset>
+      <button type="button" id="submitBtn">Submit and unlock study plan</button>
+    </div>
+  </section>
+
+  <section id="done" aria-live="polite">
+    <h1>Thank you for joining Electrical EduZone!</h1>
+    <div class="ok" id="okMsg"></div>
+    <a class="btn" id="dl" href="https://drive.google.com/file/d/1KW7FNPIpDONDZoZArm9Y4WGMSYjRtLsq/view?usp=sharing" target="_blank" rel="noopener">Open Study Plan (PDF)</a>
+    <div class="ok" id="retryBox" style="display:none">One more step: <a id="retry" href="#" target="_blank" rel="noopener">tap here to save your registration</a>, then come back to download.</div>
+    <span class="alt">Opens in Google Drive. Use the download icon at the top right to save it. <a href="https://drive.google.com/uc?export=download&id=1KW7FNPIpDONDZoZArm9Y4WGMSYjRtLsq" target="_blank" rel="noopener">Try direct download</a></span>
+  </section>
+  <p class="foot"><strong>Electrical EduZone</strong> &middot; Assistant Engineer Electrical preparation</p>
+</main>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  function setErr(key,msg,inputId){
+    $('e-'+key).textContent=msg||'';
+    if(inputId){$(inputId).classList.toggle('invalid',!!msg);}
+  }
+  function submit(){
+    var name=$('name').value.trim(), email=$('email').value.trim(), district=$('district').value.trim();
+    var q=document.querySelector('input[name=qual]:checked');
+    var ok=true;
+    setErr('name',name.length<2?'Enter your full name.':'','name'); if(name.length<2) ok=false;
+    var re=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    setErr('email',re.test(email)?'':'Enter a valid email, like name@example.com.','email'); if(!re.test(email)) ok=false;
+    setErr('district',district.length<2?'Enter your district.':'','district'); if(district.length<2) ok=false;
+    setErr('qual',q?'':'Choose your qualification.'); if(!q) ok=false;
+    if(!ok) return;
+    var FORM='https://docs.google.com/forms/d/e/1FAIpQLSemP-FPQgJE07zLeetGob3oR1k_BpGpDMi5MnrSw6rNCYCCbQ/formResponse';
+    var qs='entry.121741772='+encodeURIComponent(name)+'&entry.1743602377='+encodeURIComponent(email)+'&entry.472446147='+encodeURIComponent(q.value)+'&entry.1508891295='+encodeURIComponent(district)+'&submit=Submit';
+    var sendUrl=FORM+'?'+qs;
+    var w=null;
+    try{w=window.open(sendUrl,'_blank','noopener');}catch(err){w=null;}
+    if(!w){
+      $('retry').href=sendUrl;
+      $('retryBox').style.display='block';
+    }
+    $('okMsg').textContent='Details received, '+name.split(' ')[0]+' ('+q.value+', '+district+'). Your Assistant Engineer Electrical Study Plan is ready.';
+    $('formView').style.display='none';
+    $('done').style.display='block';
+    window.scrollTo(0,0);
+  }
+  $('submitBtn').addEventListener('click',submit);
+  document.querySelectorAll('input[type=text],input[type=email]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();submit();}});
+  });
+})();
+</script>
+</body>
+</html>
